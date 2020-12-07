@@ -16,7 +16,7 @@
  * Plugin Name:       WP Snow Effect
  * Plugin URI:        http://www.wpmaniax.com/seasonal-plugins
  * Description:       Add nice looking animation effect of falling snow to your Wordpress site and enjoy winter.
- * Version:           1.1.14
+ * Version:           1.1.15
  * Author:            WPManiax
  * Author URI:        http://www.wpmaniax.com
  * License:           GPL-2.0+

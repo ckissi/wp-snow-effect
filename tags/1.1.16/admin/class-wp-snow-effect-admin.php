@@ -88,8 +88,8 @@ class Wp_Snow_Effect_Admin
 
         $this->wpsf->add_settings_page(array(
             'parent_slug' => 'options-general.php',
-            'page_title' => __('WP Snow Effect', 'wp-snow-effect'),
-            'menu_title' => __('WP Snow Effect', 'wp-snow-effect')
+            'page_title' => __('WP Snow Effect'),
+            'menu_title' => __('WP Snow Effect')
         ));
     }
 
@@ -122,7 +122,7 @@ class Wp_Snow_Effect_Admin
     {
         if ($notices = get_option('wp_snow_effect_admin_notices')) {
             foreach ($notices as $notice) {
-                echo "<div class='updated'><p>" . wp_kses_post( $notice ) . "</p></div>";
+                echo "<div class='updated'><p>$notice</p></div>";
             }
             delete_option('wp_snow_effect_admin_notices');
         }
@@ -157,10 +157,8 @@ class Wp_Snow_Effect_Admin
     public function wp_snow_effect_set_no_bug() {
         $nobug = "";
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         if ( isset( $_GET['wpsenobug'] ) ) {
-            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-            $nobug = sanitize_text_field( wp_unslash( $_GET['wpsenobug'] ) );
+            $nobug = esc_attr( $_GET['wpsenobug'] );
         }
 
         if ( 1 == $nobug ) {

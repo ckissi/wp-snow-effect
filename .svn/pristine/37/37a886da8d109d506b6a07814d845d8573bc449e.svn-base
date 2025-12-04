@@ -1,11 +1,11 @@
 === WP Snow Effect ===
 Contributors: WPManiax 
 Donate link: http://www.wpmaniax.com/ 
-Tags: Christmas, snow, holiday, snow effect, snowflake
+Tags: snow effect, christmas, christmas snow, falling snow, holiday, holiday snow, jquery snow, jsnow, let it snow, snow, snow balls, snow effect, snow effects, Snow Flakes, snowball, snowflake, snowing, super snow, supersnow, wp snow
 Requires at least: 3.6
-Tested up to: 6.8
+Tested up to: 6.8.3
 Requires PHP: 5.6
-Stable tag: 1.1.17
+Stable tag: 1.1.16
 License:GPL2
  
 Add nice looking animation effect of falling snow to your Wordpress site and enjoy winter and Christmas.
@@ -59,9 +59,6 @@ This snow falling WP plugin uses jSnow JQuery plugin (2kb only) and no images.
 3. Settings page
 
 == Changelog ==
-
-= 1.1.17 =
-* fixed security issues and warnings
 
 = 1.1.16 =
 * tested compatibility for WordPress 6.8.3
@@ -130,9 +127,6 @@ This snow falling WP plugin uses jSnow JQuery plugin (2kb only) and no images.
 * initial release 
 
 == Upgrade Notice ==
-
-= 1.1.17 =
-* fixed security issues and warnings
 
 = 1.1.16 =
 * tested compatibility for WordPress 6.8.3

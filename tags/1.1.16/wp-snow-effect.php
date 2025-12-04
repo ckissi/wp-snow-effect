@@ -16,7 +16,7 @@
  * Plugin Name:       WP Snow Effect
  * Plugin URI:        http://www.wpmaniax.com/seasonal-plugins
  * Description:       Add nice looking animation effect of falling snow to your Wordpress site and enjoy winter.
- * Version:           1.1.17
+ * Version:           1.1.16
  * Author:            WPManiax
  * Author URI:        http://www.wpmaniax.com
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if (!defined('WPINC')) {
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wp-snow-effect-activator.php
  */
-function wp_snow_effect_activate()
+function activate_wp_snow_effect()
 {
 	require_once plugin_dir_path(__FILE__) . 'includes/class-wp-snow-effect-activator.php';
 	Wp_Snow_Effect_Activator::activate();
@@ -44,14 +44,14 @@ function wp_snow_effect_activate()
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wp-snow-effect-deactivator.php
  */
-function wp_snow_effect_deactivate()
+function deactivate_wp_snow_effect()
 {
 	require_once plugin_dir_path(__FILE__) . 'includes/class-wp-snow-effect-deactivator.php';
 	Wp_Snow_Effect_Deactivator::deactivate();
 }
 
-register_activation_hook(__FILE__, 'wp_snow_effect_activate');
-register_deactivation_hook(__FILE__, 'wp_snow_effect_deactivate');
+register_activation_hook(__FILE__, 'activate_wp_snow_effect');
+register_deactivation_hook(__FILE__, 'deactivate_wp_snow_effect');
 
 
 /**
@@ -69,10 +69,10 @@ require plugin_dir_path(__FILE__) . 'includes/class-wp-snow-effect.php';
  *
  * @since    1.0.0
  */
-function wp_snow_effect_run()
+function run_wp_snow_effect()
 {
 
 	$plugin = new Wp_Snow_Effect();
 	$plugin->run();
 }
-wp_snow_effect_run();
+run_wp_snow_effect();

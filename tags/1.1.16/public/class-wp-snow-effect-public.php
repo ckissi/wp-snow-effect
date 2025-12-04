@@ -100,8 +100,8 @@ class Wp_Snow_Effect_Public
          * between the defined hooks and the functions defined in this
          * class.
          */
-        wp_enqueue_script('jsnow', plugin_dir_url(__FILE__) . 'js/jsnow.js', array('jquery'), '1.5', true);
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wp-snow-effect-public.js', array('jquery'), $this->version, true);
+        wp_enqueue_script('jsnow', plugin_dir_url(__FILE__) . 'js/jsnow.js', array('jquery'), '1.5');
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wp-snow-effect-public.js', array('jquery'), $this->version, false);
 
         $show = true;
         if (wp_is_mobile() && $this->settings['settings_show_on_mobile'] != 'mobile') $show = false;

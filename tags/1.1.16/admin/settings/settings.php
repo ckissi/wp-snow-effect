@@ -20,9 +20,9 @@
  * and check out the tabbed settings function on line 156.
  */
 
-add_filter('wpsf_register_settings_snoweffect', 'wp_snow_effect_settings');
+add_filter('wpsf_register_settings_snoweffect', 'snoweffect_settings');
 
-function wp_snow_effect_settings($wpsf_settings)
+function snoweffect_settings($wpsf_settings)
 {
 
     // General Settings section
